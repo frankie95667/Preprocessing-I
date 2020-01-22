@@ -1,1 +1,244 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding: 0 10%;
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+header {
+  width: 90%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+  width: 100%;
+}
+header nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 25%;
+}
+#card {
+  margin-bottom: 3%;
+}
+#card .profile {
+  display: flex;
+  border: 1px solid gray;
+}
+#card .profile .profile-text {
+  padding: 4%;
+  width: 100%;
+}
+#card .profile .profile-text .profile-title {
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  border-bottom: 1px solid black;
+}
+#card table {
+  width: 100%;
+}
+#card td {
+  padding: 1%;
+}
+#card td:nth-child(1) {
+  font-weight: 600;
+  width: 20%;
+}
+#card td::nth-child(2) {
+  width: 100%;
+}
+#about {
+  display: flex;
+}
+#about div {
+  width: 50%;
+}
+#about .intro h2 {
+  margin-bottom: 2%;
+}
+#about .skills h2 {
+  margin-bottom: 2%;
+}
+#about .skills ul {
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+}
+#about .skills li {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding: 2%;
+}
+#about .skills li:last-child {
+  border-bottom: none;
+}
+#experience h2 {
+  margin-bottom: 2%;
+}
+#experience table {
+  width: 100%;
+}
+#experience table td {
+  padding: 2% 0;
+}
+#experience table th {
+  padding: 2% 0;
+  text-align: left;
+  font-weight: 600;
+}
+#experience table tr {
+  border-bottom: 1px solid lightgray;
+}
+footer {
+  margin: 5% 0;
+  text-align: center;
+}
