@@ -2,6 +2,20 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bebas Neue Regular'), local('BebasNeue-Regular'), url(https://fonts.gstatic.com/s/bebasneue/v1/JTUSjIg69CK48gW7PXoo9Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -106,6 +120,7 @@ section {
 }
 body {
   line-height: 1;
+  font-family: 'Raleway', sans-serif;
 }
 ol,
 ul {
@@ -141,8 +156,16 @@ body {
   padding: 0 10%;
   font-size: 1.6rem;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', cursive;
+}
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 h2 {
   font-size: 2.25rem;
@@ -153,6 +176,9 @@ h3 {
 h4 {
   font-size: 1.5rem;
 }
+a {
+  color: dodgerblue;
+}
 header {
   width: 90%;
 }
@@ -162,18 +188,54 @@ header nav {
   margin: 2% 0;
   width: 100%;
 }
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 header nav .links {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 25%;
 }
+@media (max-width: 500px) {
+  header nav .links {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header nav .links a {
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 3% 0;
+  }
+}
+@media (max-width: 500px) {
+  header nav .links a:last-child {
+    border-bottom: 1px solid black;
+  }
+}
 #card {
   margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  #card {
+    margin-bottom: 5%;
+  }
 }
 #card .profile {
   display: flex;
   border: 1px solid gray;
+}
+@media (max-width: 500px) {
+  #card .profile {
+    flex-direction: column;
+  }
 }
 #card .profile .profile-text {
   padding: 4%;
@@ -199,9 +261,29 @@ header nav .links {
 }
 #about {
   display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  #about {
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
 }
 #about div {
-  width: 50%;
+  width: 47%;
+}
+@media (max-width: 500px) {
+  #about div {
+    width: 100%;
+  }
+}
+#about .intro {
+  text-align: justify;
+}
+@media (max-width: 500px) {
+  #about .intro {
+    margin-bottom: 5%;
+  }
 }
 #about .intro h2 {
   margin-bottom: 2%;

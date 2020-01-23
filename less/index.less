@@ -4,6 +4,9 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Raleway&display=swap');
+
+@main-color: dodgerblue;
 .flex(){
 	display: flex;
 }
@@ -35,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Raleway', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -70,8 +74,12 @@ body {
 	font-size: 1.6rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Bebas Neue', cursive;
+}
+
 h1 {
-	font-size: 2.25rem;
+	font-size: 2.5rem;
 }
 
 h2 {
@@ -86,26 +94,60 @@ h4 {
 	font-size: 1.5rem;
 }
 
+a {
+	color: @main-color;
+}
+
 header {
 	width: 90%;
 	nav {
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
 		.flex();
 		justify-content: space-between;
 		margin: 2% 0;
 		width: 100%;
 
 		.links {
+			@media (max-width: 500px) {
+				flex-direction: column;
+				text-align: center;
+				width: 100%;
+			}
 			.flex();
 			justify-content: space-between;
 			align-items: flex-end;
 			width: 25%;
+
+			a {
+				@media (max-width: 500px) {
+					width: 100%;
+					border-top: 1px solid black;
+					padding: 3% 0;
+				}
+
+				&:last-child {
+					@media (max-width: 500px) {
+						border-bottom: 1px solid black;
+					}
+				}
+			}
 		}
 	}
 }
 
 #card {
+	@media (max-width: 500px) {
+		margin-bottom: 5%;
+	}
 	margin-bottom: 3%;
 	.profile {
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
 		.flex();
 		border: 1px solid gray;
 		.profile-text {
@@ -138,13 +180,25 @@ header {
 }
 
 #about {
+	@media (max-width: 500px) {
+		flex-direction: column;
+		margin-bottom: 5%;
+	}
 	.flex();
+	justify-content: space-between;
 
 	div {
-		width: 50%;
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+		width: 47%;
 	}
 
 	.intro {
+		@media (max-width: 500px) {
+			margin-bottom: 5%;
+		}
+		text-align: justify;
 		h2 {
 			margin-bottom: 2%;
 		}
