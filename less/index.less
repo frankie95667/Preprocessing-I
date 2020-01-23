@@ -4,6 +4,19 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Raleway&display=swap');
+
+@main-color: dodgerblue;
+@main-font: 'Raleway', sans-serif;
+@header-font: 'Bebas Neue', cursive;
+.flex(){
+	display: flex;
+}
+
+.flex-column(){
+	flex-direction: column;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +44,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: @main-font;
 }
 ol, ul {
 	list-style: none;
@@ -53,7 +67,192 @@ table {
     box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 html, body {
     height: 100%;
 }
+
+body {
+	padding: 0 10%;
+	font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @header-font;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: @main-color;
+}
+
+.container {
+	header {
+		width: 90%;
+		nav {
+			@media (max-width: 500px) {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}// close of nav in header in container
+			.flex();
+			justify-content: space-between;
+			margin: 2% 0;
+			width: 100%;
+	
+			.links {
+				@media (max-width: 500px) {
+					flex-direction: column;
+					text-align: center;
+					width: 100%;
+				}// close of media query for links in nav in header in container
+				.flex();
+				justify-content: space-between;
+				align-items: flex-end;
+				width: 25%;
+			}
+
+			a {
+				@media (max-width: 500px) {
+					width: 100%;
+					border-top: 1px solid black;
+					padding: 3% 0;
+				}// close of media query in a in nav in header in container
+
+				&:last-child {
+					@media (max-width: 500px) {
+						border-bottom: 1px solid black;
+					}// close of media query in a in nav in header in container
+				}// close of a:last-child in a in nav in header in container
+			}// close of a in nav in header in container
+		}// close of nav in header in container
+	}// close of header in container
+	
+	#card {
+		@media (max-width: 500px) {
+			margin-bottom: 5%;
+		}// close of media query in #card in .container
+		margin-bottom: 3%;
+		.profile {
+			@media (max-width: 500px) {
+				flex-direction: column;
+			}// close of media query in .profile in #card in .container
+			.flex();
+			border: 1px solid gray;
+			.profile-text {
+				padding: 4%;
+				width: 100%;
+	
+				.profile-title {
+					padding-bottom: 2%;
+					margin-bottom: 2%;
+					border-bottom: 1px solid black;
+				}// close of .profile-title in .profile-text in .profile in #card in .container
+			}// close of .profile-text in .profile in #card in .container
+		}// close of .profile in #card in .container
+	
+		table {
+			width: 100%;
+		}//close of table in #card in .container
+	
+		td {
+			padding: 1%;
+			&:nth-child(1) {
+				font-weight: 600;
+				width: 20%;
+			}// close of td:nth-child() in #card in .container
+		}// close of td in #card in .container
+	}// close of #card in .container
+	
+	#about {
+		@media (max-width: 500px) {
+			flex-direction: column;
+			margin-bottom: 5%;
+		}//close of media query in #about in .container
+		.flex();
+		justify-content: space-between;
+	
+		div {
+			@media (max-width: 500px) {
+				width: 100%;
+			}// close of media query in div in #about in .container
+			width: 47%;
+		}// close of div in #about in .container
+	
+		.intro {
+			@media (max-width: 500px) {
+				margin-bottom: 5%;
+			}// close of media query in .intro in #about in .container
+			text-align: justify;
+			h2 {
+				margin-bottom: 2%;
+			}//close of h2 in .intro in #about in .container
+		}
+	
+		.skills {
+			h2 {
+				margin-bottom: 2%;
+			}//close of h2 in .skills in #about in .container
+			ul {
+				border: 1px solid lightgray;
+				border-radius: .5rem;
+			}// close of ul in .skills in #about in .container
+			li {
+				width: 100%;
+				border-bottom: 1px solid lightgray;
+				padding: 2%;
+	
+				&:last-child {
+					border-bottom: none;
+				}// close of li:last-child in li in ul in .skills in #about in .container
+			}// close of li in .skills in #about in .container
+	
+		}// close of skills in #about in .container
+	}//close of #about in .container
+	
+	#experience {
+		h2 {
+			margin-bottom: 2%;
+		}//close of h2 in #experience in .container
+		table {
+			width: 100%;
+			td {
+				padding: 2% 0;
+			}//close of td in table in #experience in .container
+	
+			th {
+				padding: 2% 0;
+				text-align: left;
+				font-weight: 600;
+			}//close of th in table in #experience in .container
+	
+			tr {
+				border-bottom: 1px solid lightgray;
+			}//close o ftr in table in #experience in .container
+		}// close of table in #experience in .container
+	}//close of #experience in .container
+	
+	footer {
+		margin: 5% 0;
+		text-align: center;
+	}//close of footer in .container
+}//close of .container
 
